@@ -2,6 +2,10 @@
   🇷🇺 <a href="#русская-версия">Перейти к русской версии</a> • 🇬🇧 <a href="#english-version">Go to English version</a>
 </p>
 
+<p align="right">
+  <a href="#screenshots">Go to ScreenShots</a>
+</p>
+
 
 ---
 
@@ -223,7 +227,7 @@ If you find it useful, consider giving it a ⭐️ on GitHub!
 
 ---
 
-## Preview
+## Screenshots
 
 <details>
   <summary>Full preview</summary>
@@ -234,10 +238,10 @@ If you find it useful, consider giving it a ⭐️ on GitHub!
     <img src="assets/preview4.png" width="75%" style="margin:6px">
     <img src="assets/preview5.png" width="75%" style="margin:6px">
     <br>
-    <img src="assets/preview6.png" width="50%" style="margin:6px">
-    <img src="assets/preview7.png" width="50%" style="margin:6px">
-    <img src="assets/preview8.png" width="50%" style="margin:6px">
-    <img src="assets/preview9.png" width="50%" style="margin:6px">
-    <img src="assets/preview10.png" width="50%" style="margin:6px">
+    <img src="assets/preview6.png" width="35%" style="margin:6px">
+    <img src="assets/preview7.png" width="35%" style="margin:6px">
+    <img src="assets/preview8.png" width="35%" style="margin:6px">
+    <img src="assets/preview9.png" width="35%" style="margin:6px">
+    <img src="assets/preview10.png" width="35%" style="margin:6px">
   </p>
 </details>
