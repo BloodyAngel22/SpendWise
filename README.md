@@ -1,6 +1,14 @@
+<p align="right">
+  🇷🇺 <a href="#русская-версия">Перейти к русской версии</a> • 🇬🇧 <a href="#english-version">Go to English version</a>
+</p>
+
+
+---
+
+
 # 📘 SpendWise
 
-**SpendWise** — простое Flutter-приложение для **локального учёта расходов**, реализованное в рамках первого pet-проекта. Подходит как основа для личного бюджета и демонстрации навыков архитектуры, работы с BLoC, SQLite и автоматической маршрутизации.
+**SpendWise** — простое Flutter-приложение для **локального учёта расходов**. Подходит как основа для личного бюджета и демонстрации навыков архитектуры, работы с BLoC, SQLite и автоматической маршрутизации.
 
 ---
 
@@ -107,7 +115,7 @@ lib/
 
 # 📘 SpendWise
 
-**SpendWise** is a simple Flutter app for **local expense tracking**, built as a first pet project. It serves as a solid foundation for personal budgeting and demonstrates skills in app architecture, BLoC pattern, SQLite integration, and automatic routing.
+**SpendWise** is a simple Flutter app for **local expense tracking**. It serves as a solid foundation for personal budgeting and demonstrates skills in app architecture, BLoC pattern, SQLite integration, and automatic routing.
 
 ---
 
@@ -214,22 +222,22 @@ If you find it useful, consider giving it a ⭐️ on GitHub!
 
 ## Preview
 
-[preview1.png](assets/preview1.png)
+![preview1.png](/assets/preview1.png)
 
-[preview2.png](assets/preview2.png)
+![preview2.png](/assets/preview2.png)
 
-[preview3.png](assets/preview3.png)
+![preview3.png](/assets/preview3.png)
 
-[preview4.png](assets/preview4.png)
+![preview4.png](/assets/preview4.png)
 
-[preview5.png](assets/preview5.png)
+![preview5.png](/assets/preview5.png)
 
-[preview6.png](assets/preview6.png)
+![preview6.png](/assets/preview6.png)
 
-[preview7.png](assets/preview7.png)
+![preview7.png](/assets/preview7.png)
 
-[preview8.png](assets/preview8.png)
+![preview8.png](/assets/preview8.png)
 
-[preview9.png](assets/preview9.png)
+![preview9.png](/assets/preview9.png)
 
-[preview10.png](assets/preview10.png)
+![preview10.png](/assets/preview10.png)
