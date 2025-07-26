@@ -228,16 +228,16 @@ If you find it useful, consider giving it a ⭐️ on GitHub!
 <details>
   <summary>Full preview</summary>
   <p align="center">
-    <img src="assets/preview1.png" width="300" style="margin:6px">
-    <img src="assets/preview2.png" width="300" style="margin:6px">
-    <img src="assets/preview3.png" width="300" style="margin:6px">
-    <img src="assets/preview4.png" width="300" style="margin:6px">
-    <img src="assets/preview5.png" width="300" style="margin:6px">
+    <img src="assets/preview1.png" width="75%" style="margin:6px">
+    <img src="assets/preview2.png" width="75%" style="margin:6px">
+    <img src="assets/preview3.png" width="75%" style="margin:6px">
+    <img src="assets/preview4.png" width="75%" style="margin:6px">
+    <img src="assets/preview5.png" width="75%" style="margin:6px">
     <br>
-    <img src="assets/preview6.png" width="300" style="margin:6px">
-    <img src="assets/preview7.png" width="300" style="margin:6px">
-    <img src="assets/preview8.png" width="300" style="margin:6px">
-    <img src="assets/preview9.png" width="300" style="margin:6px">
-    <img src="assets/preview10.png" width="300" style="margin:6px">
+    <img src="assets/preview6.png" width="50%" style="margin:6px">
+    <img src="assets/preview7.png" width="50%" style="margin:6px">
+    <img src="assets/preview8.png" width="50%" style="margin:6px">
+    <img src="assets/preview9.png" width="50%" style="margin:6px">
+    <img src="assets/preview10.png" width="50%" style="margin:6px">
   </p>
 </details>
