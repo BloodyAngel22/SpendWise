@@ -19,7 +19,18 @@ class CategoryUsecases {
     await categoryRepository.deleteCategory(categoryId);
   }
 
-  Future<List<Category>> getCategories() async {
-    return await categoryRepository.getCategories();
+  Future<List<Category>> getCategories([String? query]) async {
+    var categories = await categoryRepository.getCategories();
+
+    if (query?.isNotEmpty == true) {
+      categories = categories
+          .where(
+            (category) =>
+                category.title.toLowerCase().contains(query!.toLowerCase()),
+          )
+          .toList();
+    }
+
+    return categories;
   }
 }

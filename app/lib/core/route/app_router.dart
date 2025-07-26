@@ -8,6 +8,7 @@ import 'package:app/features/category/presentation/update_category/update_catego
 import 'package:app/features/spend/application/bloc/spend_bloc.dart';
 import 'package:app/features/spend/domain/entities/spend.dart';
 import 'package:app/features/spend/presentation/add_spend/add_spend_screen.dart';
+import 'package:app/features/spend/presentation/spend_details/spend_details_screen.dart';
 import 'package:app/features/spend/presentation/spend_list/spend_list_screen.dart';
 import 'package:app/features/spend/presentation/update_spend/update_spend_screen.dart';
 import 'package:auto_route/auto_route.dart';
@@ -51,5 +52,9 @@ class AppRouter extends RootStackRouter {
       path: ScreenNameConstants.updateSpendScreenName,
       page: UpdateSpendRoute.page,
     ),
+    AutoRoute(
+      path: ScreenNameConstants.spendDetailsScreenName,
+      page: SpendDetailsRoute.page,
+    )
   ];
 }

@@ -21,3 +21,10 @@ class UpdateSpendEvent extends SpendEvent {
 
   UpdateSpendEvent(this.spend);
 }
+
+class UpdateSpendFilterEvent extends SpendEvent {
+  final SpendFilter filter;
+  final String query;
+
+  UpdateSpendFilterEvent(this.filter, this.query);
+}

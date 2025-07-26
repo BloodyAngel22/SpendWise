@@ -14,6 +14,7 @@ class AppTheme {
           iconSize: WidgetStatePropertyAll(textScaler.scale(28)),
         ),
       ),
+      iconTheme: IconThemeData(size: textScaler.scale(28)),
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
         selectedLabelStyle: TextStyle(fontSize: textScaler.scale(17)),
         unselectedLabelStyle: TextStyle(fontSize: textScaler.scale(17)),
@@ -44,6 +45,20 @@ class AppTheme {
           textStyle: WidgetStatePropertyAll(
             TextStyle(fontSize: textScaler.scale(16)),
           )
+        )
+      ),
+      outlinedButtonTheme: OutlinedButtonThemeData(
+        style: ButtonStyle(
+          padding: WidgetStatePropertyAll(
+            EdgeInsets.symmetric(
+              horizontal: textScaler.scale(16),
+              vertical: textScaler.scale(8),
+            )
+          ),
+          textStyle: WidgetStatePropertyAll(
+            TextStyle(fontSize: textScaler.scale(16)),
+          ),
+          iconSize: WidgetStatePropertyAll(textScaler.scale(22)),
         )
       )
     );

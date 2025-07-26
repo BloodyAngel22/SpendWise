@@ -1,3 +1,4 @@
+import 'package:app/common/widgets/search_field.dart';
 import 'package:app/core/route/app_router.dart';
 import 'package:app/features/category/application/bloc/category_bloc.dart';
 import 'package:app/features/category/presentation/category_list/widgets/category_list.dart';
@@ -7,10 +8,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 @RoutePage()
-class CategoryListScreen extends StatelessWidget {
+class CategoryListScreen extends StatefulWidget {
   const CategoryListScreen({super.key});
 
-	// TODO: добавить поиск по textfield
+  @override
+  State<CategoryListScreen> createState() => _CategoryListScreenState();
+}
+
+class _CategoryListScreenState extends State<CategoryListScreen> {
+  void _onSearchChanged(String query) {
+    context.read<CategoryBloc>().add(SearchCategoryEvent(query));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -23,19 +31,31 @@ class CategoryListScreen extends StatelessWidget {
         }
       },
       child: Scaffold(
-        body: BlocBuilder<CategoryBloc, CategoryState>(
-          builder: (context, state) {
-            if (state is CategoryLoadingState) {
-              return const Center(child: CircularProgressIndicator());
-            }
-            if (state is CategoriesLoadedState) {
-              return CategoryList(categories: state.categories);
-            }
-            if (state is CategoryErrorState) {
-              return Center(child: Text('Ошибка. ${state.message}'));
-            }
-            return Container();
-          },
+        body: SafeArea(
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(12),
+                child: SearchField(onSearchChanged: _onSearchChanged, hintText: 'Поиск по категориям',),
+              ),
+              Expanded(
+                child: BlocBuilder<CategoryBloc, CategoryState>(
+                  builder: (context, state) {
+                    if (state is CategoryLoadingState) {
+                      return const Center(child: CircularProgressIndicator());
+                    }
+                    if (state is CategoriesLoadedState) {
+                      return CategoryList(categories: state.categories);
+                    }
+                    if (state is CategoryErrorState) {
+                      return Center(child: Text('Ошибка. ${state.message}'));
+                    }
+                    return Container();
+                  },
+                ),
+              ),
+            ],
+          ),
         ),
         floatingActionButton: Builder(
           builder: (innerContext) => FloatingActionButton(

@@ -21,3 +21,9 @@ class UpdateCategoryEvent extends CategoryEvent {
 
   UpdateCategoryEvent(this.category);
 }
+
+class SearchCategoryEvent extends CategoryEvent {
+  final String query;
+
+  SearchCategoryEvent(this.query);
+}

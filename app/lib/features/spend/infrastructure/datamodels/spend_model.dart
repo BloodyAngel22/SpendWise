@@ -8,6 +8,7 @@ class SpendModel {
   final int categoryId;
 
   static const maxTitleLength = 50;
+  static const maxAmount = 1_000_000;
 
   SpendModel({
     required this.id,

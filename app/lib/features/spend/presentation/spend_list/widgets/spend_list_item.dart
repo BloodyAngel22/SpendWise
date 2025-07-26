@@ -14,6 +14,12 @@ class SpendListItem extends StatelessWidget {
 
   const SpendListItem({super.key, required this.spend});
 
+  String get formattedAmount => NumberFormat.currency(
+    locale: 'ru',
+    symbol: '₽',
+    decimalDigits: 2,
+  ).format(spend.amount);
+
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -23,8 +29,10 @@ class SpendListItem extends StatelessWidget {
     final isMobile = mediaQuery.size.width < 600;
 
     return Card(
-      margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+      margin: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
       child: InkWell(
+        onTap: () =>
+            AutoRouter.of(context).push(SpendDetailsRoute(spend: spend)),
         borderRadius: BorderRadius.circular(12),
         child: Padding(
           padding: const EdgeInsets.all(16),
@@ -47,7 +55,7 @@ class SpendListItem extends StatelessWidget {
                         Icon(
                           Icons.category,
                           color: colorScheme.onSurface.withValues(alpha: 0.85),
-                          size: 20,
+                          size: isMobile ? 18 : 26,
                         ),
                         const SizedBox(width: 4),
                         Expanded(
@@ -69,7 +77,7 @@ class SpendListItem extends StatelessWidget {
                       children: [
                         Icon(
                           Icons.calendar_today,
-                          size: 20,
+                          size: isMobile ? 18 : 26,
                           color: colorScheme.onSurface.withValues(alpha: 0.85),
                         ),
                         const SizedBox(width: 4),
@@ -86,19 +94,20 @@ class SpendListItem extends StatelessWidget {
               ConstrainedBox(
                 constraints: BoxConstraints(
                   minWidth: isMobile ? 70 : 150,
-                  maxWidth: isMobile ? 120 : 350,
+                  maxWidth: isMobile ? 130 : 350,
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     Text(
-                      '${spend.amount.toStringAsFixed(2)} ₽',
+                      formattedAmount,
                       style: theme.textTheme.titleMedium?.copyWith(
                         color: colorScheme.primary,
                       ),
                     ),
                     const SizedBox(height: 8),
                     Row(
+											spacing: isMobile ? 4 : 16,
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         Builder(

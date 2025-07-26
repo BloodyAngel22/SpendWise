@@ -137,6 +137,53 @@ class MainTabsRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [SpendDetailsScreen]
+class SpendDetailsRoute extends PageRouteInfo<SpendDetailsRouteArgs> {
+  SpendDetailsRoute({
+    Key? key,
+    required Spend spend,
+    List<PageRouteInfo>? children,
+  }) : super(
+         SpendDetailsRoute.name,
+         args: SpendDetailsRouteArgs(key: key, spend: spend),
+         initialChildren: children,
+       );
+
+  static const String name = 'SpendDetailsRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      final args = data.argsAs<SpendDetailsRouteArgs>();
+      return SpendDetailsScreen(key: args.key, spend: args.spend);
+    },
+  );
+}
+
+class SpendDetailsRouteArgs {
+  const SpendDetailsRouteArgs({this.key, required this.spend});
+
+  final Key? key;
+
+  final Spend spend;
+
+  @override
+  String toString() {
+    return 'SpendDetailsRouteArgs{key: $key, spend: $spend}';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+    if (other is! SpendDetailsRouteArgs) return false;
+    return key == other.key && spend == other.spend;
+  }
+
+  @override
+  int get hashCode => key.hashCode ^ spend.hashCode;
+}
+
+/// generated route for
 /// [SpendListScreen]
 class SpendListRoute extends PageRouteInfo<void> {
   const SpendListRoute({List<PageRouteInfo>? children})

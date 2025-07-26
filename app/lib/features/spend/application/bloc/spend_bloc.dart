@@ -1,5 +1,6 @@
 import 'package:app/features/spend/application/usecases/spend_usecases.dart';
 import 'package:app/features/spend/domain/entities/spend.dart';
+import 'package:app/features/spend/domain/entities/spend_filter.dart';
 import 'package:app/features/spend/infrastructure/datamodels/spend_model.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:talker_flutter/talker_flutter.dart';
@@ -52,6 +53,21 @@ class SpendBloc extends Bloc<SpendEvent, SpendState> {
         await spendUsecases.deleteSpend(event.spendId);
         emit(SpendDeletedState());
         final spends = await spendUsecases.getSpendsWithCategory();
+        emit(SpendsLoadedState(spends: spends));
+      } catch (exception, stackTrace) {
+        talker.handle(exception, stackTrace);
+        emit(SpendErrorState(message: exception.toString()));
+      }
+    });
+
+    on<UpdateSpendFilterEvent>((event, emit) async {
+      emit(SpendLoadingState());
+
+      try {
+        final spends = await spendUsecases.getSpendsWithCategory(
+          event.query,
+          event.filter,
+        );
         emit(SpendsLoadedState(spends: spends));
       } catch (exception, stackTrace) {
         talker.handle(exception, stackTrace);

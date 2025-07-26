@@ -63,5 +63,16 @@ class CategoryBloc extends Bloc<CategoryEvent, CategoryState> {
         emit(CategoryErrorState(exception.toString()));
       }
     });
+
+    on<SearchCategoryEvent>((event, emit) async {
+      emit(CategoryLoadingState());
+      try {
+        final categories = await categoryUsecases.getCategories(event.query);
+        emit(CategoriesLoadedState(categories));
+      } catch (exception, stackTrace) {
+        _talker.handle(exception, stackTrace);
+        emit(CategoryErrorState(exception.toString()));
+      }
+    });
   }
 }

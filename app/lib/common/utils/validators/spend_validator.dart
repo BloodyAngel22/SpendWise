@@ -22,6 +22,9 @@ class SpendValidator {
     if (double.parse(value) <= 0) {
       return 'Сумма расхода должна быть больше 0';
     }
+    if (double.parse(value) > SpendModel.maxAmount) {
+      return 'Сумма расхода не должна превышать ${SpendModel.maxAmount}';
+    }
     return null;
   }
 

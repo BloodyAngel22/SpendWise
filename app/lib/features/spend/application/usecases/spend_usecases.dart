@@ -1,4 +1,5 @@
 import 'package:app/features/spend/domain/entities/spend.dart';
+import 'package:app/features/spend/domain/entities/spend_filter.dart';
 import 'package:app/features/spend/domain/irepositories/i_spend_repository.dart';
 import 'package:app/features/spend/infrastructure/datamodels/spend_model.dart';
 
@@ -7,8 +8,11 @@ class SpendUsecases {
 
   SpendUsecases(this.spendRepository);
 
-  Future<List<Spend>> getSpendsWithCategory() async {
-    return await spendRepository.getSpends();
+  Future<List<Spend>> getSpendsWithCategory([
+    String? query,
+    SpendFilter? filter,
+  ]) async {
+    return await spendRepository.getSpends(query, filter);
   }
 
   Future<void> addSpend(SpendModel spend) async {
