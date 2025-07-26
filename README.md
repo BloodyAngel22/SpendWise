@@ -5,14 +5,15 @@
 
 ---
 
+## Русская версия
 
-# 📘 SpendWise
+### 📘 SpendWise
 
 **SpendWise** — простое Flutter-приложение для **локального учёта расходов**. Подходит как основа для личного бюджета и демонстрации навыков архитектуры, работы с BLoC, SQLite и автоматической маршрутизации.
 
 ---
 
-## 🧠 Особенности
+#### 🧠 Особенности
 
 - 📂 Категории для структурирования трат  
 - 📝 Добавление, удаление и редактирование трат  
@@ -23,7 +24,7 @@
 
 ---
 
-## 🧱 Архитектура
+#### 🧱 Архитектура
 
 Проект построен на **Feature-based + Clean Architecture** подходе:
 
@@ -37,24 +38,24 @@
 
 ---
 
-## 📸 Функциональность
+#### 📸 Функциональность
 
-### 💸 Расходы
+##### 💸 Расходы
 - Добавление, удаление, редактирование
 - Детальный экран для отображения полной информации
 - Фильтрация и поиск
 
-### 📂 Категории
+##### 📂 Категории
 - CRUD-операции
 - Заранее предзаполненные категории
 
-### 🔎 Поиск и фильтры
+##### 🔎 Поиск и фильтры
 - По ключевым словам
 - По диапазону дат и сумм
 
 ---
 
-## 🛠️ Технологии
+#### 🛠️ Технологии
 
 ```yaml
 dependencies:
@@ -69,7 +70,7 @@ dependencies:
 
 ---
 
-## 🚀 Как запустить
+#### 🚀 Как запустить
 
 ```bash
 # 1. Перейти в директорию с проектом
@@ -85,14 +86,14 @@ flutter run
 
 ---
 
-## 🧭 TODO
+#### 🧭 TODO
 
 - Поддержка тёмной темы
 - Локализация на английский язык
 
 ---
 
-## 📂 Структура проекта
+#### 📂 Структура проекта
 
 ```bash
 lib/
@@ -106,20 +107,22 @@ lib/
 
 ---
 
-## 🤝 Автор
+#### 🤝 Автор
 
 Проект создан в рамках личного изучения Flutter.
 Если вам понравилось — не забудьте ⭐️ в репозитории.
 
 ---
 
-# 📘 SpendWise
+## English version
+
+### 📘 SpendWise
 
 **SpendWise** is a simple Flutter app for **local expense tracking**. It serves as a solid foundation for personal budgeting and demonstrates skills in app architecture, BLoC pattern, SQLite integration, and automatic routing.
 
 ---
 
-## 🧠 Features
+#### 🧠 Features
 
 - 📂 Categories to organize your expenses  
 - 📝 Add, delete, and edit expenses  
@@ -130,7 +133,7 @@ lib/
 
 ---
 
-## 🧱 Architecture
+#### 🧱 Architecture
 
 The project follows a **Feature-based + Clean Architecture** approach:
 
@@ -144,24 +147,24 @@ Logging is powered by `talker_flutter`.
 
 ---
 
-## 📸 Functionality
+#### 📸 Functionality
 
-### 💸 Expenses
+##### 💸 Expenses
 - Create, update, delete
 - Detailed screen for mobile-friendly display
 - Filtering and search
 
-### 📂 Categories
+##### 📂 Categories
 - Full CRUD support
 - Pre-filled default categories
 
-### 🔎 Search & Filtering
+##### 🔎 Search & Filtering
 - By keywords
 - By date range and amount range
 
 ---
 
-## 🛠️ Technologies
+#### 🛠️ Technologies
 
 ```yaml
 dependencies:
@@ -176,7 +179,7 @@ dependencies:
 
 ---
 
-## 🚀 Getting Started
+#### 🚀 Getting Started
 
 ```bash
 # 1. Navigate to the app directory
@@ -192,14 +195,14 @@ flutter run
 
 ---
 
-## 🧭 TODO
+#### 🧭 TODO
 
 - Add dark theme
 - Add English localization
 
 ---
 
-## 📂 Project Structure
+#### 📂 Project Structure
 
 ```bash
 lib/
@@ -213,7 +216,7 @@ lib/
 
 ---
 
-## 🤝 Author
+#### 🤝 Author
 
 This app was built as a learning project for Flutter.
 If you find it useful, consider giving it a ⭐️ on GitHub!
@@ -222,22 +225,19 @@ If you find it useful, consider giving it a ⭐️ on GitHub!
 
 ## Preview
 
-![preview1.png](/assets/preview1.png)
-
-![preview2.png](/assets/preview2.png)
-
-![preview3.png](/assets/preview3.png)
-
-![preview4.png](/assets/preview4.png)
-
-![preview5.png](/assets/preview5.png)
-
-![preview6.png](/assets/preview6.png)
-
-![preview7.png](/assets/preview7.png)
-
-![preview8.png](/assets/preview8.png)
-
-![preview9.png](/assets/preview9.png)
-
-![preview10.png](/assets/preview10.png)
+<details>
+  <summary>Full preview</summary>
+  <p align="center">
+    <img src="assets/preview1.png" width="300" style="margin:6px">
+    <img src="assets/preview2.png" width="300" style="margin:6px">
+    <img src="assets/preview3.png" width="300" style="margin:6px">
+    <img src="assets/preview4.png" width="300" style="margin:6px">
+    <img src="assets/preview5.png" width="300" style="margin:6px">
+    <br>
+    <img src="assets/preview6.png" width="300" style="margin:6px">
+    <img src="assets/preview7.png" width="300" style="margin:6px">
+    <img src="assets/preview8.png" width="300" style="margin:6px">
+    <img src="assets/preview9.png" width="300" style="margin:6px">
+    <img src="assets/preview10.png" width="300" style="margin:6px">
+  </p>
+</details>
