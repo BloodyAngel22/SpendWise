@@ -1,10 +1,23 @@
 import 'package:flutter/material.dart';
 
 class AppTheme {
-  static ThemeData getTheme(TextScaler textScaler) {
+  static ThemeData getTheme({
+    required bool isDark,
+    required TextScaler textScaler,
+  }) {
+    final colorScheme = isDark
+        ? ColorScheme.fromSeed(
+            seedColor: Colors.blueAccent,
+            brightness: Brightness.dark,
+          )
+        : ColorScheme.fromSeed(
+            seedColor: Colors.blueAccent,
+            brightness: Brightness.light,
+          );
+
     return ThemeData(
       useMaterial3: true,
-      colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent),
+      colorScheme: colorScheme,
       textTheme: getTextTheme(textScaler),
       splashFactory: NoSplash.splashFactory,
       hoverColor: Colors.transparent,
@@ -18,7 +31,7 @@ class AppTheme {
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
         selectedLabelStyle: TextStyle(fontSize: textScaler.scale(17)),
         unselectedLabelStyle: TextStyle(fontSize: textScaler.scale(17)),
-        selectedIconTheme: IconThemeData(size: textScaler.scale(28)),
+        selectedIconTheme: IconThemeData(size: textScaler.scale(28), color: Colors.green),
         unselectedIconTheme: IconThemeData(size: textScaler.scale(28)),
       ),
       textButtonTheme: TextButtonThemeData(
@@ -27,7 +40,7 @@ class AppTheme {
             EdgeInsets.symmetric(
               horizontal: textScaler.scale(16),
               vertical: textScaler.scale(8),
-            )
+            ),
           ),
           textStyle: WidgetStatePropertyAll(
             TextStyle(fontSize: textScaler.scale(16)),
@@ -40,12 +53,12 @@ class AppTheme {
             EdgeInsets.symmetric(
               horizontal: textScaler.scale(16),
               vertical: textScaler.scale(8),
-          ),
+            ),
           ),
           textStyle: WidgetStatePropertyAll(
             TextStyle(fontSize: textScaler.scale(16)),
-          )
-        )
+          ),
+        ),
       ),
       outlinedButtonTheme: OutlinedButtonThemeData(
         style: ButtonStyle(
@@ -53,14 +66,14 @@ class AppTheme {
             EdgeInsets.symmetric(
               horizontal: textScaler.scale(16),
               vertical: textScaler.scale(8),
-            )
+            ),
           ),
           textStyle: WidgetStatePropertyAll(
             TextStyle(fontSize: textScaler.scale(16)),
           ),
           iconSize: WidgetStatePropertyAll(textScaler.scale(22)),
-        )
-      )
+        ),
+      ),
     );
   }
 

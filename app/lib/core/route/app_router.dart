@@ -5,6 +5,7 @@ import 'package:app/features/category/domain/entities/category.dart';
 import 'package:app/features/category/presentation/add_category/add_category_screen.dart';
 import 'package:app/features/category/presentation/category_list/category_list_screen.dart';
 import 'package:app/features/category/presentation/update_category/update_category_screen.dart';
+import 'package:app/features/settings/presentation/settings_screen.dart';
 import 'package:app/features/spend/application/bloc/spend_bloc.dart';
 import 'package:app/features/spend/domain/entities/spend.dart';
 import 'package:app/features/spend/presentation/add_spend/add_spend_screen.dart';
@@ -34,6 +35,10 @@ class AppRouter extends RootStackRouter {
           path: ScreenNameConstants.categoryListScreenName,
           page: CategoryListRoute.page,
         ),
+        AutoRoute(
+          path: ScreenNameConstants.settingsScreenName,
+          page: SettingsRoute.page,
+        )
       ],
     ),
     AutoRoute(

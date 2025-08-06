@@ -24,6 +24,7 @@
 - 🔍 Поиск по тратам и категориям  
 - 📅 Фильтрация по дате, категории и сумме  
 - 📱 Полностью оффлайн, без подключения к интернету  
+- 🎨 Поддержка светлой и тёмной темы
 - 🇷🇺 Русский язык по умолчанию  
 
 ---
@@ -43,6 +44,9 @@
 ---
 
 #### 📸 Функциональность
+
+##### 🎨 Темы
+- Переключение между светлой и тёмной темой.
 
 ##### 💸 Расходы
 - Добавление, удаление, редактирование
@@ -70,6 +74,7 @@ dependencies:
   intl
   talker_flutter
   flutter_debouncer
+  shared_preferences
 ```
 
 ---
@@ -92,7 +97,6 @@ flutter run
 
 #### 🧭 TODO
 
-- Поддержка тёмной темы
 - Локализация на английский язык
 
 ---
@@ -133,6 +137,7 @@ lib/
 - 🔍 Search by name in expenses and categories  
 - 📅 Filter by date range, category, and amount  
 - 📱 Fully offline — no internet connection required  
+- 🎨 Dark and Light theme support
 - 🇷🇺 Russian UI (default)
 
 ---
@@ -152,6 +157,9 @@ Logging is powered by `talker_flutter`.
 ---
 
 #### 📸 Functionality
+
+##### 🎨 Themes
+- Switch between dark and light themes.
 
 ##### 💸 Expenses
 - Create, update, delete
@@ -179,6 +187,7 @@ dependencies:
   intl
   talker_flutter
   flutter_debouncer
+  shared_preferences
 ```
 
 ---
@@ -201,7 +210,6 @@ flutter run
 
 #### 🧭 TODO
 
-- Add dark theme
 - Add English localization
 
 ---
@@ -237,11 +245,15 @@ If you find it useful, consider giving it a ⭐️ on GitHub!
     <img src="assets/preview3.png" width="75%" style="margin:6px">
     <img src="assets/preview4.png" width="75%" style="margin:6px">
     <img src="assets/preview5.png" width="75%" style="margin:6px">
+    <img src="assets/preview11.png" width="75%" style="margin:6px">
+    <img src="assets/preview12.png" width="75%" style="margin:6px">
     <br>
     <img src="assets/preview6.png" width="35%" style="margin:6px">
     <img src="assets/preview7.png" width="35%" style="margin:6px">
     <img src="assets/preview8.png" width="35%" style="margin:6px">
     <img src="assets/preview9.png" width="35%" style="margin:6px">
     <img src="assets/preview10.png" width="35%" style="margin:6px">
+    <img src="assets/preview13.png" width="35%" style="margin:6px">
+    <img src="assets/preview14.png" width="35%" style="margin:6px">
   </p>
 </details>

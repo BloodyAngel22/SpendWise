@@ -24,7 +24,7 @@ class MainTabsScreen extends StatelessWidget {
         ),
       ],
       child: AutoTabsScaffold(
-        routes: const [SpendListRoute(), CategoryListRoute()],
+        routes: const [SpendListRoute(), CategoryListRoute(), SettingsRoute()],
         bottomNavigationBuilder: (context, tabsRouter) {
           return BottomNavigationBar(
             currentIndex: tabsRouter.activeIndex,
@@ -37,6 +37,7 @@ class MainTabsScreen extends StatelessWidget {
                 icon: Icon(Icons.category),
                 label: 'Категории',
               ),
+              BottomNavigationBarItem(icon: Icon(Icons.settings), label: 'Настройки'),
             ],
           );
         },

@@ -18,4 +18,6 @@ class ScreenNameConstants {
   static const addSpendScreenName = '/add_spend';
   static const updateSpendScreenName = '/update_spend';
   static const spendDetailsScreenName = '/spend_details';
+
+  static const settingsScreenName = 'settings';
 }
