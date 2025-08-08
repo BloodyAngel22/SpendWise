@@ -5,17 +5,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ThemeSwitcher extends StatelessWidget {
-  const ThemeSwitcher({
-    super.key,
-    required this.isDark,
-    required this.theme,
-  });
-
-  final bool isDark;
-  final ThemeData theme;
+  const ThemeSwitcher({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final isDark = context.watch<ThemeCubit>().state;
+    final theme = Theme.of(context);
+
     return SwitchListTile(
       value: isDark,
       onChanged: (_) => context.read<ThemeCubit>().toggleTheme(),

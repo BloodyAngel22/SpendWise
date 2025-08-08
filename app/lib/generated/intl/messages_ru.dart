@@ -82,8 +82,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Вы действительно хотите удалить трату?"),
         "deleteSpendTitle":
             MessageLookupByLibrary.simpleMessage("Удалить трату?"),
+        "english": MessageLookupByLibrary.simpleMessage("Английский"),
         "error": m5,
         "filters": MessageLookupByLibrary.simpleMessage("Фильтры"),
+        "language": MessageLookupByLibrary.simpleMessage("Язык"),
         "lastSpendAt": m6,
         "moneySymbol": MessageLookupByLibrary.simpleMessage("₽"),
         "noDataOnCategories":
@@ -93,6 +95,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "noSpends": MessageLookupByLibrary.simpleMessage("нет трат"),
         "notSelected": MessageLookupByLibrary.simpleMessage("Не выбрано"),
         "reset": MessageLookupByLibrary.simpleMessage("Сбросить"),
+        "russian": MessageLookupByLibrary.simpleMessage("Русский"),
         "searchByCategories":
             MessageLookupByLibrary.simpleMessage("Поиск по категориям"),
         "searchByExpenses":

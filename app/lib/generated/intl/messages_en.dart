@@ -79,8 +79,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Are you sure you want to delete the expense?"),
         "deleteSpendTitle":
             MessageLookupByLibrary.simpleMessage("Delete expense?"),
+        "english": MessageLookupByLibrary.simpleMessage("English"),
         "error": m5,
         "filters": MessageLookupByLibrary.simpleMessage("Filters"),
+        "language": MessageLookupByLibrary.simpleMessage("Language"),
         "lastSpendAt": m6,
         "moneySymbol": MessageLookupByLibrary.simpleMessage("\$"),
         "noDataOnCategories":
@@ -90,6 +92,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "noSpends": MessageLookupByLibrary.simpleMessage("no expenses"),
         "notSelected": MessageLookupByLibrary.simpleMessage("Not selected"),
         "reset": MessageLookupByLibrary.simpleMessage("Reset"),
+        "russian": MessageLookupByLibrary.simpleMessage("Russian"),
         "searchByCategories":
             MessageLookupByLibrary.simpleMessage("Search by categories"),
         "searchByExpenses":
