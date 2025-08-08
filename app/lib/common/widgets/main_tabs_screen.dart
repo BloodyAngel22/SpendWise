@@ -1,3 +1,4 @@
+import 'package:app/generated/l10n.dart';
 import 'package:app/core/route/app_router.dart';
 import 'package:app/features/category/application/bloc/category_bloc.dart';
 import 'package:app/features/spend/application/bloc/spend_bloc.dart';
@@ -31,13 +32,13 @@ class MainTabsScreen extends StatelessWidget {
             onTap: (index) {
               tabsRouter.setActiveIndex(index);
             },
-            items: const [
-              BottomNavigationBarItem(icon: Icon(Icons.list), label: 'Траты'),
+            items: [
+              BottomNavigationBarItem(icon: const Icon(Icons.list), label: S.of(context).tabSpends),
               BottomNavigationBarItem(
-                icon: Icon(Icons.category),
-                label: 'Категории',
+                icon: const Icon(Icons.category),
+                label: S.of(context).tabCategories,
               ),
-              BottomNavigationBarItem(icon: Icon(Icons.settings), label: 'Настройки'),
+              BottomNavigationBarItem(icon: const Icon(Icons.settings), label: S.of(context).tabSettings),
             ],
           );
         },

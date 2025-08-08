@@ -22,28 +22,115 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m0(money) => "Сумма трат (${money})";
 
-  static String m1(message) => "Ошибка. ${message}";
+  static String m1(value) => "Сумма: ${value}";
+
+  static String m2(max) =>
+      "Название категории не должно превышать ${max} символов";
+
+  static String m3(value) => "Категория: ${value}";
+
+  static String m4(value) => "Дата: ${value}";
+
+  static String m5(date) => "Последняя трата: ${date}";
+
+  static String m6(max) => "Сумма расхода не должна превышать ${max}";
+
+  static String m7(message) => "Ошибка. ${message}";
+
+  static String m8(max) =>
+      "Название расхода не должно превышать ${max} символов";
+
+  static String m9(version) => "Версия ${version}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "amountOfExpenses": m0,
-    "apply": MessageLookupByLibrary.simpleMessage("Применить"),
-    "cancel": MessageLookupByLibrary.simpleMessage("Отменить"),
-    "category": MessageLookupByLibrary.simpleMessage("Категория"),
-    "clickPlusToAddFirstExpense": MessageLookupByLibrary.simpleMessage(
-      "Нажмите на + чтобы добавить первый расход",
-    ),
-    "dateRange": MessageLookupByLibrary.simpleMessage("Диапазон дат"),
-    "filters": MessageLookupByLibrary.simpleMessage("Фильтры"),
-    "moneySymbol": MessageLookupByLibrary.simpleMessage("₽"),
-    "noDataOnExpenses": MessageLookupByLibrary.simpleMessage(
-      "Нет данных о расходах",
-    ),
-    "notSelected": MessageLookupByLibrary.simpleMessage("Не выбрано"),
-    "reset": MessageLookupByLibrary.simpleMessage("Сбросить"),
-    "searchByExpenses": MessageLookupByLibrary.simpleMessage(
-      "Поиск по расходам",
-    ),
-    "spendError": m1,
-  };
+        "aboutApp": MessageLookupByLibrary.simpleMessage("О приложении"),
+        "add": MessageLookupByLibrary.simpleMessage("Добавить"),
+        "addCategoryTitle":
+            MessageLookupByLibrary.simpleMessage("Добавить категорию"),
+        "addSpendTitle":
+            MessageLookupByLibrary.simpleMessage("Добавить расход"),
+        "amountOfExpenses": m0,
+        "amountWithValue": m1,
+        "appTitle": MessageLookupByLibrary.simpleMessage("SpendWise"),
+        "apply": MessageLookupByLibrary.simpleMessage("Применить"),
+        "cancel": MessageLookupByLibrary.simpleMessage("Отменить"),
+        "category": MessageLookupByLibrary.simpleMessage("Категория"),
+        "categoryTitleEmpty": MessageLookupByLibrary.simpleMessage(
+            "Пожалуйста, введите название категории"),
+        "categoryTitleExists": MessageLookupByLibrary.simpleMessage(
+            "Категория с таким названием уже существует"),
+        "categoryTitleHint":
+            MessageLookupByLibrary.simpleMessage("Введите название категории"),
+        "categoryTitleLabel":
+            MessageLookupByLibrary.simpleMessage("Название категории"),
+        "categoryTitleTooLong": m2,
+        "categoryWithValue": m3,
+        "clickPlusToAddFirstCategory": MessageLookupByLibrary.simpleMessage(
+            "Нажмите на + чтобы добавить категорию"),
+        "clickPlusToAddFirstExpense": MessageLookupByLibrary.simpleMessage(
+            "Нажмите на + чтобы добавить первый расход"),
+        "date": MessageLookupByLibrary.simpleMessage("Дата"),
+        "dateRange": MessageLookupByLibrary.simpleMessage("Диапазон дат"),
+        "dateWithValue": m4,
+        "delete": MessageLookupByLibrary.simpleMessage("Удалить"),
+        "deleteCategoryConfirmation": MessageLookupByLibrary.simpleMessage(
+            "Вы действительно хотите удалить категорию?\nЭто действие может повлечь удаление связанных трат."),
+        "deleteCategoryTitle":
+            MessageLookupByLibrary.simpleMessage("Удалить категорию?"),
+        "deleteSpendConfirmation": MessageLookupByLibrary.simpleMessage(
+            "Вы действительно хотите удалить трату?"),
+        "deleteSpendTitle":
+            MessageLookupByLibrary.simpleMessage("Удалить трату?"),
+        "filters": MessageLookupByLibrary.simpleMessage("Фильтры"),
+        "lastSpendAt": m5,
+        "moneySymbol": MessageLookupByLibrary.simpleMessage("₽"),
+        "noDataOnCategories":
+            MessageLookupByLibrary.simpleMessage("Нет данных о категориях"),
+        "noDataOnExpenses":
+            MessageLookupByLibrary.simpleMessage("Нет данных о расходах"),
+        "noSpends": MessageLookupByLibrary.simpleMessage("нет трат"),
+        "notSelected": MessageLookupByLibrary.simpleMessage("Не выбрано"),
+        "reset": MessageLookupByLibrary.simpleMessage("Сбросить"),
+        "searchByCategories":
+            MessageLookupByLibrary.simpleMessage("Поиск по категориям"),
+        "searchByExpenses":
+            MessageLookupByLibrary.simpleMessage("Поиск по расходам"),
+        "selectDate": MessageLookupByLibrary.simpleMessage("Выберите дату"),
+        "spendAmountEmpty": MessageLookupByLibrary.simpleMessage(
+            "Пожалуйста, введите сумму расхода"),
+        "spendAmountGreaterThanZero": MessageLookupByLibrary.simpleMessage(
+            "Сумма расхода должна быть больше 0"),
+        "spendAmountHint":
+            MessageLookupByLibrary.simpleMessage("Введите сумму расхода"),
+        "spendAmountLabel":
+            MessageLookupByLibrary.simpleMessage("Сумма расхода"),
+        "spendAmountNotNumber": MessageLookupByLibrary.simpleMessage(
+            "Сумма расхода должна быть числом"),
+        "spendAmountTooLarge": m6,
+        "spendCategoryRequired": MessageLookupByLibrary.simpleMessage(
+            "Пожалуйста, выберите категорию расхода"),
+        "spendDetailsTitle":
+            MessageLookupByLibrary.simpleMessage("Детали траты"),
+        "spendError": m7,
+        "spendTitleEmpty": MessageLookupByLibrary.simpleMessage(
+            "Название расхода не может быть пустым"),
+        "spendTitleHint":
+            MessageLookupByLibrary.simpleMessage("Введите название расхода"),
+        "spendTitleLabel":
+            MessageLookupByLibrary.simpleMessage("Название расхода"),
+        "spendTitleTooLong": m8,
+        "tabCategories": MessageLookupByLibrary.simpleMessage("Категории"),
+        "tabSettings": MessageLookupByLibrary.simpleMessage("Настройки"),
+        "tabSpends": MessageLookupByLibrary.simpleMessage("Траты"),
+        "theme": MessageLookupByLibrary.simpleMessage("Тема"),
+        "themeDark": MessageLookupByLibrary.simpleMessage("Тёмная"),
+        "themeLight": MessageLookupByLibrary.simpleMessage("Светлая"),
+        "update": MessageLookupByLibrary.simpleMessage("Обновить"),
+        "updateCategoryTitle":
+            MessageLookupByLibrary.simpleMessage("Обновить категорию"),
+        "updateSpendTitle":
+            MessageLookupByLibrary.simpleMessage("Обновить расход"),
+        "version": m9
+      };
 }

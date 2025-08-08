@@ -11,5 +11,64 @@
   "amountOfExpenses": "Сумма трат ({money})",
   "reset": "Сбросить",
   "cancel": "Отменить",
-  "apply": "Применить"
+  "apply": "Применить",
+
+  "appTitle": "SpendWise",
+  "tabSpends": "Траты",
+  "tabCategories": "Категории",
+  "tabSettings": "Настройки",
+
+  "aboutApp": "О приложении",
+  "version": "Версия {version}",
+
+  "theme": "Тема",
+  "themeDark": "Тёмная",
+  "themeLight": "Светлая",
+
+  "spendDetailsTitle": "Детали траты",
+  "categoryWithValue": "Категория: {value}",
+  "dateWithValue": "Дата: {value}",
+  "amountWithValue": "Сумма: {value}",
+  "date": "Дата",
+
+  "searchByCategories": "Поиск по категориям",
+
+  "addSpendTitle": "Добавить расход",
+  "updateSpendTitle": "Обновить расход",
+  "spendTitleLabel": "Название расхода",
+  "spendTitleHint": "Введите название расхода",
+  "spendAmountLabel": "Сумма расхода",
+  "spendAmountHint": "Введите сумму расхода",
+  "selectDate": "Выберите дату",
+  "add": "Добавить",
+  "update": "Обновить",
+
+  "deleteSpendTitle": "Удалить трату?",
+  "deleteSpendConfirmation": "Вы действительно хотите удалить трату?",
+  "delete": "Удалить",
+
+  "deleteCategoryTitle": "Удалить категорию?",
+  "deleteCategoryConfirmation": "Вы действительно хотите удалить категорию?\nЭто действие может повлечь удаление связанных трат.",
+
+  "addCategoryTitle": "Добавить категорию",
+  "updateCategoryTitle": "Обновить категорию",
+  "categoryTitleLabel": "Название категории",
+  "categoryTitleHint": "Введите название категории",
+
+  "noDataOnCategories": "Нет данных о категориях",
+  "clickPlusToAddFirstCategory": "Нажмите на + чтобы добавить категорию",
+  "lastSpendAt": "Последняя трата: {date}",
+  "noSpends": "нет трат",
+
+  "spendTitleEmpty": "Название расхода не может быть пустым",
+  "spendTitleTooLong": "Название расхода не должно превышать {max} символов",
+  "spendAmountEmpty": "Пожалуйста, введите сумму расхода",
+  "spendAmountNotNumber": "Сумма расхода должна быть числом",
+  "spendAmountGreaterThanZero": "Сумма расхода должна быть больше 0",
+  "spendAmountTooLarge": "Сумма расхода не должна превышать {max}",
+  "spendCategoryRequired": "Пожалуйста, выберите категорию расхода",
+
+  "categoryTitleEmpty": "Пожалуйста, введите название категории",
+  "categoryTitleTooLong": "Название категории не должно превышать {max} символов",
+  "categoryTitleExists": "Категория с таким названием уже существует"
 }

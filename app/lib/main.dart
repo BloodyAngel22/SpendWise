@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
       child: BlocBuilder<ThemeCubit, bool>(
         builder: (context, isDark) {
           return MaterialApp.router(
-            title: 'SpendWise',
+            onGenerateTitle: (context) => S.of(context).appTitle,
             builder: (context, child) {
               final mediaQueryData = MediaQuery.of(context);
               final isDesktop = mediaQueryData.size.width > 600;
@@ -60,15 +60,14 @@ class MyApp extends StatelessWidget {
             },
             routerDelegate: _appRouter.delegate(),
             routeInformationParser: _appRouter.defaultRouteParser(),
-						// TODO: убрать
-						locale: Locale('en'),
-						localizationsDelegates: [
-							S.delegate,
-							GlobalMaterialLocalizations.delegate,
-							GlobalWidgetsLocalizations.delegate,
-							GlobalCupertinoLocalizations.delegate
-						],
-						supportedLocales: S.delegate.supportedLocales,
+            locale: const Locale('en'),
+            localizationsDelegates: const [
+              S.delegate,
+              GlobalMaterialLocalizations.delegate,
+              GlobalWidgetsLocalizations.delegate,
+              GlobalCupertinoLocalizations.delegate,
+            ],
+            supportedLocales: S.delegate.supportedLocales,
             debugShowCheckedModeBanner: false,
           );
         },
