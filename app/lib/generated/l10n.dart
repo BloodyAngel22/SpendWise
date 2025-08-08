@@ -71,10 +71,10 @@ class S {
   }
 
   /// `Error. {message}`
-  String spendError(Object message) {
+  String error(Object message) {
     return Intl.message(
       'Error. $message',
-      name: 'spendError',
+      name: 'error',
       desc: '',
       args: [message],
     );

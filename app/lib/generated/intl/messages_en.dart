@@ -30,11 +30,11 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m4(value) => "Date: ${value}";
 
-  static String m5(date) => "Last spend: ${date}";
+  static String m5(message) => "Error. ${message}";
 
-  static String m6(max) => "Expense amount must not exceed ${max}";
+  static String m6(date) => "Last spend: ${date}";
 
-  static String m7(message) => "Error. ${message}";
+  static String m7(max) => "Expense amount must not exceed ${max}";
 
   static String m8(max) => "Expense title must not exceed ${max} characters";
 
@@ -79,8 +79,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "Are you sure you want to delete the expense?"),
         "deleteSpendTitle":
             MessageLookupByLibrary.simpleMessage("Delete expense?"),
+        "error": m5,
         "filters": MessageLookupByLibrary.simpleMessage("Filters"),
-        "lastSpendAt": m5,
+        "lastSpendAt": m6,
         "moneySymbol": MessageLookupByLibrary.simpleMessage("\$"),
         "noDataOnCategories":
             MessageLookupByLibrary.simpleMessage("No data on categories"),
@@ -104,12 +105,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Expense amount"),
         "spendAmountNotNumber": MessageLookupByLibrary.simpleMessage(
             "Expense amount must be a number"),
-        "spendAmountTooLarge": m6,
+        "spendAmountTooLarge": m7,
         "spendCategoryRequired": MessageLookupByLibrary.simpleMessage(
             "Please select an expense category"),
         "spendDetailsTitle":
             MessageLookupByLibrary.simpleMessage("Expense details"),
-        "spendError": m7,
         "spendTitleEmpty": MessageLookupByLibrary.simpleMessage(
             "Expense title cannot be empty"),
         "spendTitleHint":

@@ -85,7 +85,7 @@ class _SpendListScreenState extends State<SpendListScreen> {
                     }
                     if (state is SpendErrorState) {
                       return Center(
-                        child: Text(S.of(context).spendError(state.message)),
+                        child: Text(S.of(context).error(state.message)),
                       );
                     }
                     return Container();

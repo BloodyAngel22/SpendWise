@@ -1,7 +1,7 @@
 {
   "searchByExpenses": "Search by expenses",
   "filters": "Filters",
-  "spendError": "Error. {message}",
+  "error": "Error. {message}",
   "noDataOnExpenses": "No data on expenses",
   "clickPlusToAddFirstExpense": "Click on + to add your first expense",
   "moneySymbol": "$",

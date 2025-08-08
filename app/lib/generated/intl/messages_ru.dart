@@ -31,11 +31,11 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m4(value) => "Дата: ${value}";
 
-  static String m5(date) => "Последняя трата: ${date}";
+  static String m5(message) => "Ошибка. ${message}";
 
-  static String m6(max) => "Сумма расхода не должна превышать ${max}";
+  static String m6(date) => "Последняя трата: ${date}";
 
-  static String m7(message) => "Ошибка. ${message}";
+  static String m7(max) => "Сумма расхода не должна превышать ${max}";
 
   static String m8(max) =>
       "Название расхода не должно превышать ${max} символов";
@@ -82,8 +82,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "Вы действительно хотите удалить трату?"),
         "deleteSpendTitle":
             MessageLookupByLibrary.simpleMessage("Удалить трату?"),
+        "error": m5,
         "filters": MessageLookupByLibrary.simpleMessage("Фильтры"),
-        "lastSpendAt": m5,
+        "lastSpendAt": m6,
         "moneySymbol": MessageLookupByLibrary.simpleMessage("₽"),
         "noDataOnCategories":
             MessageLookupByLibrary.simpleMessage("Нет данных о категориях"),
@@ -107,12 +108,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Сумма расхода"),
         "spendAmountNotNumber": MessageLookupByLibrary.simpleMessage(
             "Сумма расхода должна быть числом"),
-        "spendAmountTooLarge": m6,
+        "spendAmountTooLarge": m7,
         "spendCategoryRequired": MessageLookupByLibrary.simpleMessage(
             "Пожалуйста, выберите категорию расхода"),
         "spendDetailsTitle":
             MessageLookupByLibrary.simpleMessage("Детали траты"),
-        "spendError": m7,
         "spendTitleEmpty": MessageLookupByLibrary.simpleMessage(
             "Название расхода не может быть пустым"),
         "spendTitleHint":

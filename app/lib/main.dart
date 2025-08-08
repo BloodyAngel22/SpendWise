@@ -60,7 +60,8 @@ class MyApp extends StatelessWidget {
             },
             routerDelegate: _appRouter.delegate(),
             routeInformationParser: _appRouter.defaultRouteParser(),
-            locale: const Locale('en'),
+            // TODO: убрать
+            // locale: const Locale('en'),
             localizationsDelegates: const [
               S.delegate,
               GlobalMaterialLocalizations.delegate,

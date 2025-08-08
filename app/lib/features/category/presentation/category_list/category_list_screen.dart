@@ -49,7 +49,7 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
                       return CategoryList(categories: state.categories);
                     }
                     if (state is CategoryErrorState) {
-                      return Center(child: Text(S.of(context).spendError(state.message)));
+                      return Center(child: Text(S.of(context).error(state.message)));
                     }
                     return Container();
                   },
