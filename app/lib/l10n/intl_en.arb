@@ -1,0 +1,15 @@
+{
+  "searchByExpenses": "Search by expenses",
+  "filters": "Filters",
+  "spendError": "Error. {message}",
+  "noDataOnExpenses": "No data on expenses",
+  "clickPlusToAddFirstExpense": "Click on + to add your first expense",
+  "moneySymbol": "$",
+  "category": "Category",
+  "dateRange": "Date range",
+  "notSelected": "Not selected",
+  "amountOfExpenses": "Amount of expenses ({money})",
+  "reset": "Reset",
+  "cancel": "Cancel ",
+  "apply": "Apply"
+}

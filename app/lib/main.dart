@@ -3,8 +3,10 @@ import 'package:app/core/constants/constants.dart';
 import 'package:app/core/di/injection.dart';
 import 'package:app/core/route/app_router.dart';
 import 'package:app/core/theme/app_theme.dart';
+import 'package:app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get_it/get_it.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 import 'package:talker_flutter/talker_flutter.dart';
@@ -58,6 +60,15 @@ class MyApp extends StatelessWidget {
             },
             routerDelegate: _appRouter.delegate(),
             routeInformationParser: _appRouter.defaultRouteParser(),
+						// TODO: убрать
+						locale: Locale('en'),
+						localizationsDelegates: [
+							S.delegate,
+							GlobalMaterialLocalizations.delegate,
+							GlobalWidgetsLocalizations.delegate,
+							GlobalCupertinoLocalizations.delegate
+						],
+						supportedLocales: S.delegate.supportedLocales,
             debugShowCheckedModeBanner: false,
           );
         },

@@ -2,6 +2,7 @@ import 'package:app/core/route/app_router.dart';
 import 'package:app/features/spend/application/bloc/spend_bloc.dart';
 import 'package:app/features/spend/domain/entities/spend.dart';
 import 'package:app/features/spend/presentation/delete_spend/widgets/delete_spend_dialog.dart';
+import 'package:app/generated/l10n.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -14,9 +15,8 @@ class SpendListItem extends StatelessWidget {
 
   const SpendListItem({super.key, required this.spend});
 
-  String get formattedAmount => NumberFormat.currency(
-    locale: 'ru',
-    symbol: '₽',
+  String formattedAmount(BuildContext context) => NumberFormat.currency(
+    symbol: S.of(context).moneySymbol,
     decimalDigits: 2,
   ).format(spend.amount);
 
@@ -100,7 +100,7 @@ class SpendListItem extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     Text(
-                      formattedAmount,
+                      formattedAmount(context),
                       style: theme.textTheme.titleMedium?.copyWith(
                         color: colorScheme.primary,
                       ),

@@ -1,0 +1,15 @@
+{
+  "searchByExpenses": "Поиск по расходам",
+  "filters": "Фильтры",
+  "spendError": "Ошибка. {message}",
+  "noDataOnExpenses": "Нет данных о расходах",
+  "clickPlusToAddFirstExpense": "Нажмите на + чтобы добавить первый расход",
+  "moneySymbol": "₽",
+  "category": "Категория",
+  "dateRange": "Диапазон дат",
+  "notSelected": "Не выбрано",
+  "amountOfExpenses": "Сумма трат ({money})",
+  "reset": "Сбросить",
+  "cancel": "Отменить",
+  "apply": "Применить"
+}

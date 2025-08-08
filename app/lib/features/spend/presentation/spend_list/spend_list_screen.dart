@@ -5,6 +5,7 @@ import 'package:app/features/spend/application/bloc/spend_bloc.dart';
 import 'package:app/features/spend/domain/entities/spend_filter.dart';
 import 'package:app/features/spend/presentation/spend_list/widgets/filter_spend_sheet.dart';
 import 'package:app/features/spend/presentation/spend_list/widgets/spend_list.dart';
+import 'package:app/generated/l10n.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -55,7 +56,7 @@ class _SpendListScreenState extends State<SpendListScreen> {
                 padding: const EdgeInsets.all(12),
                 child: SearchField(
                   onSearchChanged: _onSearchChanged,
-                  hintText: 'Поиск по расходам',
+                  hintText: S.of(context).searchByExpenses,
                 ),
               ),
               Padding(
@@ -66,7 +67,7 @@ class _SpendListScreenState extends State<SpendListScreen> {
                     builder: (context) {
                       return OutlinedButton.icon(
                         onPressed: () => Scaffold.of(context).openEndDrawer(),
-                        label: const Text('Фильтры'),
+                        label: Text(S.of(context).filters),
                         icon: const Icon(Icons.filter_list),
                       );
                     },
@@ -83,7 +84,9 @@ class _SpendListScreenState extends State<SpendListScreen> {
                       return SpendList(spends: state.spends);
                     }
                     if (state is SpendErrorState) {
-                      return Center(child: Text('Ошибка. ${state.message}'));
+                      return Center(
+                        child: Text(S.of(context).spendError(state.message)),
+                      );
                     }
                     return Container();
                   },
