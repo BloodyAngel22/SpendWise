@@ -95,8 +95,8 @@ class _AddSpendScreenState extends State<AddSpendScreen> {
               ),
 							InkWell(onTap: () => _selectDate(context),
                 child: InputDecorator(
-                  decoration: const InputDecoration(
-                    labelText: 'Дата',
+                  decoration: InputDecoration(
+                    labelText: S.of(context).date,
                     border: OutlineInputBorder(),
                   ),
 									child: Row(
