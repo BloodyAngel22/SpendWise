@@ -75,7 +75,7 @@ dependencies:
   talker_flutter
   flutter_debouncer
   shared_preferences
-	flutter_localizations
+  flutter_localizations
 ```
 
 ---
@@ -183,7 +183,7 @@ dependencies:
   talker_flutter
   flutter_debouncer
   shared_preferences
-	flutter_localizations
+  flutter_localizations
 ```
 
 ---
