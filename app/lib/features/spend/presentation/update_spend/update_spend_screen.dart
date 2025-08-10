@@ -1,4 +1,4 @@
-import 'package:app/common/utils/validators/spend_validator.dart';
+import 'package:app/features/spend/application/validators/spend_validator.dart';
 import 'package:app/features/category/application/usecases/category_usecases.dart';
 import 'package:app/features/category/domain/entities/category.dart';
 import 'package:app/features/spend/application/bloc/spend_bloc.dart';

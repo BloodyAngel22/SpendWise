@@ -1,5 +1,5 @@
-import 'package:app/common/utils/cubits/locale_cubit.dart';
-import 'package:app/common/utils/cubits/theme_cubit.dart';
+import 'package:app/core/states/locale_cubit.dart';
+import 'package:app/core/states/theme_cubit.dart';
 import 'package:app/core/data/init.dart';
 import 'package:app/core/talker/log.dart';
 import 'package:app/features/category/application/bloc/category_bloc.dart';

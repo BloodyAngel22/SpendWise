@@ -1,4 +1,4 @@
-import 'package:app/common/utils/validators/category_validator.dart';
+import 'package:app/features/category/application/validators/category_validator.dart';
 import 'package:app/features/category/application/bloc/category_bloc.dart';
 import 'package:app/features/category/domain/entities/category.dart';
 import 'package:app/features/category/domain/irepositories/i_category_repository.dart';

@@ -1,5 +1,5 @@
-import 'package:app/common/utils/cubits/locale_cubit.dart';
-import 'package:app/common/utils/cubits/theme_cubit.dart';
+import 'package:app/core/states/locale_cubit.dart';
+import 'package:app/core/states/theme_cubit.dart';
 import 'package:app/core/constants/constants.dart';
 import 'package:app/core/di/injection.dart';
 import 'package:app/core/route/app_router.dart';
