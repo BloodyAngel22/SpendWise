@@ -8,6 +8,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:intl/intl.dart';
 import 'package:talker_flutter/talker_flutter.dart';
+import 'package:app/generated/l10n.dart';
 
 class CategoryListItem extends StatelessWidget {
   final Category category;
@@ -32,7 +33,11 @@ class CategoryListItem extends StatelessWidget {
         overflow: TextOverflow.clip,
       ),
       subtitle: Text(
-        'Последняя трата: ${category.lastSpendAt != null ? DateFormat('dd.MM.yyyy').format(category.lastSpendAt!) : 'нет трат'}',
+        S.of(context).lastSpendAt(
+          category.lastSpendAt != null
+              ? DateFormat('dd.MM.yyyy').format(category.lastSpendAt!)
+              : S.of(context).noSpends,
+        ),
         style: theme.textTheme.labelLarge,
       ),
       trailing: Wrap(

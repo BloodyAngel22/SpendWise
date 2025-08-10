@@ -6,6 +6,7 @@ import 'package:app/features/spend/application/bloc/spend_bloc.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:app/generated/l10n.dart';
 
 @RoutePage()
 class CategoryListScreen extends StatefulWidget {
@@ -36,7 +37,7 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
             children: [
               Padding(
                 padding: const EdgeInsets.all(12),
-                child: SearchField(onSearchChanged: _onSearchChanged, hintText: 'Поиск по категориям',),
+                child: SearchField(onSearchChanged: _onSearchChanged, hintText: S.of(context).searchByCategories,),
               ),
               Expanded(
                 child: BlocBuilder<CategoryBloc, CategoryState>(
@@ -48,7 +49,7 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
                       return CategoryList(categories: state.categories);
                     }
                     if (state is CategoryErrorState) {
-                      return Center(child: Text('Ошибка. ${state.message}'));
+                      return Center(child: Text(S.of(context).error(state.message)));
                     }
                     return Container();
                   },

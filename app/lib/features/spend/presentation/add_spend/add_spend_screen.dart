@@ -7,6 +7,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:intl/intl.dart';
+import 'package:app/generated/l10n.dart';
 import 'package:talker_flutter/talker_flutter.dart';
 
 @RoutePage()
@@ -63,7 +64,7 @@ class _AddSpendScreenState extends State<AddSpendScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Добавить расход', style: theme.textTheme.titleMedium),
+        title: Text(S.of(context).addSpendTitle, style: theme.textTheme.titleMedium),
         centerTitle: true,
       ),
       body: Padding(
@@ -76,8 +77,8 @@ class _AddSpendScreenState extends State<AddSpendScreen> {
               TextFormField(
                 controller: _titleController,
                 decoration: InputDecoration(
-                  labelText: 'Название расхода',
-                  hintText: 'Введите название расхода',
+                  labelText: S.of(context).spendTitleLabel,
+                  hintText: S.of(context).spendTitleHint,
                   border: OutlineInputBorder(),
                 ),
                 validator: (value) => SpendValidator.validateTitle(value),
@@ -85,8 +86,8 @@ class _AddSpendScreenState extends State<AddSpendScreen> {
               TextFormField(
                 controller: _amountController,
                 decoration: InputDecoration(
-                  labelText: 'Сумма расхода',
-                  hintText: 'Введите сумму расхода',
+                  labelText: S.of(context).spendAmountLabel,
+                  hintText: S.of(context).spendAmountHint,
                   border: OutlineInputBorder(),
                 ),
                 keyboardType: TextInputType.numberWithOptions(decimal: true),
@@ -94,8 +95,8 @@ class _AddSpendScreenState extends State<AddSpendScreen> {
               ),
 							InkWell(onTap: () => _selectDate(context),
                 child: InputDecorator(
-                  decoration: const InputDecoration(
-                    labelText: 'Дата',
+                  decoration: InputDecoration(
+                    labelText: S.of(context).date,
                     border: OutlineInputBorder(),
                   ),
 									child: Row(
@@ -103,7 +104,7 @@ class _AddSpendScreenState extends State<AddSpendScreen> {
                     children: [
                       Text(
                         _spendAtController.text.isEmpty
-                            ? 'Выберите дату'
+                            ? S.of(context).selectDate
                             : _spendAtController.text,
                       ),
                       const Icon(Icons.calendar_month),
@@ -112,8 +113,8 @@ class _AddSpendScreenState extends State<AddSpendScreen> {
                 ),
               ),
               DropdownButtonFormField<Category>(
-                decoration: const InputDecoration(
-                  labelText: 'Категория',
+                decoration: InputDecoration(
+                  labelText: S.of(context).category,
                   border: OutlineInputBorder(),
                 ),
                 items: categories.map((category) {
@@ -136,9 +137,9 @@ class _AddSpendScreenState extends State<AddSpendScreen> {
                 children: [
                   ElevatedButton(
                     onPressed: () => Navigator.pop(context),
-                    child: Text('Отменить'),
+                    child: Text(S.of(context).cancel),
                   ),
-                  ElevatedButton(onPressed: () => _submitForm(context, getIt), child: Text('Добавить')),
+                  ElevatedButton(onPressed: () => _submitForm(context, getIt), child: Text(S.of(context).add)),
                 ],
               ),
             ],

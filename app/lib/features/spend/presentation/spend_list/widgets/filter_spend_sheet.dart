@@ -1,6 +1,7 @@
 import 'package:app/features/category/application/usecases/category_usecases.dart';
 import 'package:app/features/category/domain/entities/category.dart';
 import 'package:app/features/spend/domain/entities/spend_filter.dart';
+import 'package:app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:intl/intl.dart';
@@ -73,7 +74,6 @@ class _FilterSpendDrawerState extends State<FilterSpendDrawer> {
       initialDate: selectedDateRange?.start ?? now,
       firstDate: firstDate,
       lastDate: lastDate,
-      helpText: 'Начальная дата',
     );
 
     if (pickedStart == null) return;
@@ -83,7 +83,6 @@ class _FilterSpendDrawerState extends State<FilterSpendDrawer> {
       initialDate: selectedDateRange?.end ?? pickedStart,
       firstDate: pickedStart,
       lastDate: lastDate,
-      helpText: 'Конечная дата',
     );
 
     if (pickedEnd == null) return;
@@ -94,7 +93,7 @@ class _FilterSpendDrawerState extends State<FilterSpendDrawer> {
   }
 
   String _formatDateRange(DateTimeRange? range) {
-    if (range == null) return 'Не выбрано';
+    if (range == null) return S.of(context).notSelected;
     final format = DateFormat('dd.MM.yyyy');
     return '${format.format(range.start)} — ${format.format(range.end)}';
   }
@@ -111,7 +110,7 @@ class _FilterSpendDrawerState extends State<FilterSpendDrawer> {
           padding: const EdgeInsets.all(16),
           child: ListView(
             children: [
-              Text('Фильтры', style: theme.textTheme.titleSmall),
+              Text(S.of(context).filters, style: theme.textTheme.titleSmall),
               const SizedBox(height: 16),
 
               // Категория
@@ -123,8 +122,8 @@ class _FilterSpendDrawerState extends State<FilterSpendDrawer> {
                     )
                     .toList(),
                 onChanged: (c) => setState(() => selectedCategory = c),
-                decoration: const InputDecoration(
-                  labelText: 'Категория',
+                decoration: InputDecoration(
+                  labelText: S.of(context).category,
                   border: OutlineInputBorder(),
                 ),
                 style: theme.textTheme.bodyMedium,
@@ -138,7 +137,7 @@ class _FilterSpendDrawerState extends State<FilterSpendDrawer> {
                   child: TextFormField(
                     readOnly: true,
                     decoration: InputDecoration(
-                      labelText: 'Диапазон дат',
+                      labelText: S.of(context).dateRange,
                       border: const OutlineInputBorder(),
                       suffixIcon: const Icon(Icons.calendar_today),
                     ),
@@ -151,23 +150,23 @@ class _FilterSpendDrawerState extends State<FilterSpendDrawer> {
               const SizedBox(height: 16),
 
               // Сумма
-              Text('Сумма трат (₽)', style: theme.textTheme.bodyMedium),
+              Text(S.of(context).amountOfExpenses(S.of(context).moneySymbol), style: theme.textTheme.bodyMedium),
               RangeSlider(
                 values: selectedAmountRange,
                 min: minAmount,
                 max: maxAmount,
                 divisions: 100,
                 labels: RangeLabels(
-                  '${selectedAmountRange.start.toInt()} ₽',
-                  '${selectedAmountRange.end.toInt()} ₽',
+                  '${selectedAmountRange.start.toInt()} ${S.of(context).moneySymbol}',
+                  '${selectedAmountRange.end.toInt()} ${S.of(context).moneySymbol}',
                 ),
                 onChanged: (r) => setState(() => selectedAmountRange = r),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text('${selectedAmountRange.start.toInt()} ₽'),
-                  Text('${selectedAmountRange.end.toInt()} ₽'),
+                  Text('${selectedAmountRange.start.toInt()} ${S.of(context).moneySymbol}'),
+                  Text('${selectedAmountRange.end.toInt()} ${S.of(context).moneySymbol}'),
                 ],
               ),
 
@@ -176,7 +175,7 @@ class _FilterSpendDrawerState extends State<FilterSpendDrawer> {
               Expanded(
                 child: OutlinedButton(
                   onPressed: _clear,
-                  child: const Text('Сбросить'),
+                  child: Text(S.of(context).reset),
                 ),
               ),
 
@@ -189,13 +188,13 @@ class _FilterSpendDrawerState extends State<FilterSpendDrawer> {
                   Expanded(
                     child: OutlinedButton(
                       onPressed: Navigator.of(context).maybePop,
-                      child: const Text('Отменить'),
+                      child: Text(S.of(context).cancel),
                     ),
                   ),
                   Expanded(
                     child: OutlinedButton(
                       onPressed: _apply,
-                      child: const Text('Применить'),
+                      child: Text(S.of(context).apply),
                     ),
                   ),
                 ],

@@ -1,6 +1,7 @@
 import 'package:app/features/category/domain/entities/category.dart';
 import 'package:app/features/category/presentation/category_list/widgets/category_list_item.dart';
 import 'package:flutter/material.dart';
+import 'package:app/generated/l10n.dart';
 
 class CategoryList extends StatelessWidget {
   final List<Category> categories;
@@ -25,7 +26,7 @@ class CategoryList extends StatelessWidget {
               ),
               const SizedBox(height: 16),
               Text(
-                'Нет данных о категориях',
+                S.of(context).noDataOnCategories,
                 style: theme.textTheme.titleMedium?.copyWith(
                   color: theme.colorScheme.onSurface.withValues(alpha: 0.5),
                 ),
@@ -33,7 +34,7 @@ class CategoryList extends StatelessWidget {
               ),
               const SizedBox(height: 8),
               Text(
-                'Нажмите на + чтобы добавить категорию',
+                S.of(context).clickPlusToAddFirstCategory,
                 style: theme.textTheme.bodyMedium?.copyWith(
                   color: theme.colorScheme.onSurface.withValues(alpha: 0.4),
                 ),

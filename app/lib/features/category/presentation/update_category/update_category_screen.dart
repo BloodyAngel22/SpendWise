@@ -7,6 +7,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:talker_flutter/talker_flutter.dart';
+import 'package:app/generated/l10n.dart';
 
 @RoutePage()
 class UpdateCategoryScreen extends StatefulWidget {
@@ -56,7 +57,7 @@ class _UpdateCategoryScreenState extends State<UpdateCategoryScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Обновить категорию', style: theme.textTheme.titleMedium),
+        title: Text(S.of(context).updateCategoryTitle, style: theme.textTheme.titleMedium),
         centerTitle: true,
       ),
       body: Padding(
@@ -69,8 +70,8 @@ class _UpdateCategoryScreenState extends State<UpdateCategoryScreen> {
               TextFormField(
                 controller: _nameController,
                 decoration: InputDecoration(
-                  labelText: 'Название категории',
-                  hintText: 'Введите название категории',
+                  labelText: S.of(context).categoryTitleLabel,
+                  hintText: S.of(context).categoryTitleHint,
                   border: OutlineInputBorder(),
                 ),
                 validator: (value) => CategoryValidator.validateTitle(value, categories),
@@ -81,11 +82,11 @@ class _UpdateCategoryScreenState extends State<UpdateCategoryScreen> {
                 children: [
                   ElevatedButton(
                     onPressed: () => Navigator.pop(context),
-                    child: const Text('Отмена'),
+                    child: Text(S.of(context).cancel),
                   ),
                   ElevatedButton(
                     onPressed: () => _submitForm(context, getIt),
-                    child: const Text('Обновить'),
+                    child: Text(S.of(context).update),
                   ),
                 ],
               ),

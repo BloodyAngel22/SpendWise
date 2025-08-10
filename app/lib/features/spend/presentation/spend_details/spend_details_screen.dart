@@ -1,5 +1,6 @@
 import 'package:app/features/spend/domain/entities/spend.dart';
 import 'package:auto_route/auto_route.dart';
+import 'package:app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -8,12 +9,11 @@ class SpendDetailsScreen extends StatelessWidget {
   final Spend spend;
   const SpendDetailsScreen({super.key, required this.spend});
 
-  String get formattedDate => DateFormat('dd.MM.yyyy').format(spend.spendAt);
-  String get formattedAmount => NumberFormat.currency(
-    locale: 'ru',
-    symbol: '₽',
-    decimalDigits: 2,
-  ).format(spend.amount);
+  String formattedDate(BuildContext context) => DateFormat('dd.MM.yyyy').format(spend.spendAt);
+  String formattedAmount(BuildContext context) => NumberFormat.currency(
+        symbol: S.of(context).moneySymbol,
+        decimalDigits: 2,
+      ).format(spend.amount);
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class SpendDetailsScreen extends StatelessWidget {
     final colorScheme = theme.colorScheme;
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Детали траты')),
+      appBar: AppBar(title: Text(S.of(context).spendDetailsTitle)),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
         child: Card(
@@ -49,7 +49,7 @@ class SpendDetailsScreen extends StatelessWidget {
                     const SizedBox(width: 8),
                     Expanded(
                       child: Text(
-                        'Категория: ${spend.categoryName}',
+                        S.of(context).categoryWithValue(spend.categoryName),
                         style: theme.textTheme.bodyLarge,
                         softWrap: true,
                       ),
@@ -62,7 +62,7 @@ class SpendDetailsScreen extends StatelessWidget {
                     Icon(Icons.calendar_today, color: colorScheme.primary),
                     const SizedBox(width: 8),
                     Text(
-                      'Дата: $formattedDate',
+                      S.of(context).dateWithValue(formattedDate(context)),
                       style: theme.textTheme.bodyLarge,
                     ),
                   ],
@@ -73,7 +73,7 @@ class SpendDetailsScreen extends StatelessWidget {
                     Icon(Icons.attach_money, color: colorScheme.primary),
                     const SizedBox(width: 8),
                     Text(
-                      'Сумма: $formattedAmount',
+                      S.of(context).amountWithValue(formattedAmount(context)),
                       style: theme.textTheme.bodyLarge,
                     ),
                   ],

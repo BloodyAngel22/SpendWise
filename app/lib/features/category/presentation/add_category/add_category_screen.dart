@@ -7,6 +7,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:talker_flutter/talker_flutter.dart';
+import 'package:app/generated/l10n.dart';
 
 @RoutePage()
 class AddCategoryScreen extends StatefulWidget {
@@ -46,7 +47,7 @@ class _AddCategoryScreenState extends State<AddCategoryScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Добавить категорию', style: theme.textTheme.titleMedium),
+        title: Text(S.of(context).addCategoryTitle, style: theme.textTheme.titleMedium),
         centerTitle: true,
       ),
       body: Padding(
@@ -59,8 +60,8 @@ class _AddCategoryScreenState extends State<AddCategoryScreen> {
               TextFormField(
                 controller: _nameController,
                 decoration: InputDecoration(
-                  labelText: 'Название категории',
-                  hintText: 'Введите название категории',
+                  labelText: S.of(context).categoryTitleLabel,
+                  hintText: S.of(context).categoryTitleHint,
                   border: OutlineInputBorder(),
                 ),
                 validator: (value) => CategoryValidator.validateTitle(value, categories),
@@ -71,11 +72,11 @@ class _AddCategoryScreenState extends State<AddCategoryScreen> {
                 children: [
                   ElevatedButton(
                     onPressed: () => Navigator.pop(context),
-                    child: const Text('Отмена'),
+                    child: Text(S.of(context).cancel),
                   ),
                   ElevatedButton(
                     onPressed: () => _submitForm(context, getIt),
-                    child: const Text('Добавить'),
+                    child: Text(S.of(context).add),
                   ),
                 ],
               ),

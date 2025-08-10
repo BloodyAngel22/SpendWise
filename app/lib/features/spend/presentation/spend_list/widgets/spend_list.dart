@@ -1,5 +1,6 @@
 import 'package:app/features/spend/domain/entities/spend.dart';
 import 'package:app/features/spend/presentation/spend_list/widgets/spend_list_item.dart';
+import 'package:app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class SpendList extends StatelessWidget {
@@ -28,7 +29,7 @@ class SpendList extends StatelessWidget {
               ),
               const SizedBox(height: 16),
               Text(
-                'Нет данных о расходах',
+                S.of(context).noDataOnExpenses,
                 style: theme.textTheme.titleMedium?.copyWith(
                   color: theme.colorScheme.onSurface.withValues(alpha: 0.5),
                 ),
@@ -36,7 +37,7 @@ class SpendList extends StatelessWidget {
               ),
               const SizedBox(height: 8),
               Text(
-                'Нажмите на + чтобы добавить первый расход',
+                S.of(context).clickPlusToAddFirstExpense,
                 style: theme.textTheme.bodyMedium?.copyWith(
                   color: theme.colorScheme.onSurface.withValues(alpha: 0.4),
                 ),
